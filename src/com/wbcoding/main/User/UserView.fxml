@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="400.0" style="-fx-background-color: #018786 #018786;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wbcoding.main.User.UserController">
+   <children>
+      <Label layoutX="122.0" layoutY="27.0" text="Novo Usuário" textFill="#f2efef">
+         <font>
+            <Font name="Trebuchet MS Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="64.0" text="Nome" textFill="#f5f2f2">
+         <font>
+            <Font name="Trebuchet MS Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="137.0" text="Usuário" textFill="#f5f3f3">
+         <font>
+            <Font name="Trebuchet MS Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="13.0" layoutY="211.0" text="Senha" textFill="#f5f3f3">
+         <font>
+            <Font name="Trebuchet MS Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="15.0" layoutY="282.0" text="Confirmar Senha" textFill="#f5f3f3">
+         <font>
+            <Font name="Trebuchet MS Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="name" layoutX="15.0" layoutY="84.0" onKeyReleased="#checkFields" prefHeight="40.0" prefWidth="367.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="username" layoutX="15.0" layoutY="157.0" onKeyReleased="#checkFields" prefHeight="40.0" prefWidth="367.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></TextField>
+      <PasswordField fx:id="password" layoutX="15.0" layoutY="231.0" onKeyReleased="#checkFields" prefHeight="40.0" prefWidth="367.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></PasswordField>
+      <PasswordField fx:id="repeatPassword" layoutX="15.0" layoutY="302.0" onKeyReleased="#checkFields" prefHeight="40.0" prefWidth="367.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></PasswordField>
+      <Button fx:id="saveBtn" defaultButton="true" disable="true" layoutX="232.0" layoutY="360.0" mnemonicParsing="false" onAction="#saveAndCloseWindow" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #006064#006064 #006064#006064;" text="SALVAR" textFill="#f5f3f3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button cancelButton="true" layoutX="312.0" layoutY="360.0" mnemonicParsing="false" onAction="#closeWindow" style="-fx-background-color: #006064#006064 #006064#006064;" text="FECHAR" textFill="#f2efef">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="usernameLabel" layoutX="85.0" layoutY="137.0" prefHeight="20.0" prefWidth="279.0" textFill="#f5b7b7" />
+      <Label fx:id="passwordLabel" layoutX="78.0" layoutY="213.0" prefHeight="17.0" prefWidth="279.0" textFill="#f5b7b7" />
+      <Label fx:id="nameLabel" layoutX="85.0" layoutY="66.0" prefHeight="17.0" prefWidth="294.0" textFill="#f5b7b7" />
+   </children>
+</Pane>

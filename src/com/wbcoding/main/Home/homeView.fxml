@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1200.0" style="-fx-background-color: #018786 #018786 #018786 #018786; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wbcoding.main.Home.HomeController">
+   <children>
+      <TableView fx:id="table" layoutX="242.0" layoutY="51.0" onMouseClicked="#showDeleteBtn" prefHeight="498.0" prefWidth="943.0">
+        <columns>
+          <TableColumn fx:id="descriptionCol" prefWidth="518.0000152587891" resizable="false" text="Descrição" />
+            <TableColumn fx:id="accountCol" prefWidth="131.0" resizable="false" text="Conta" />
+            <TableColumn fx:id="valueCol" minWidth="2.999969482421875" prefWidth="153.0" resizable="false" text="Valor" />
+            <TableColumn fx:id="dateCol" minWidth="0.0" prefWidth="140.0" resizable="false" text="Data" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <DatePicker fx:id="newDate" editable="false" layoutX="10.0" layoutY="408.0" onMouseClicked="#cleanMsgNewData" onMousePressed="#hideDeleteBtn" prefHeight="27.0" prefWidth="125.0" promptText="Selecionar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></DatePicker>
+      <Label layoutX="54.0" layoutY="170.0" text="Saldo Disponível:" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="51.0" text="Conta Corrente" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="75.0" text="Conta Poupança" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="102.0" text="Cartão de Crédito" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="128.0" text="Dinheiro" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="chequingLabel" alignment="CENTER_RIGHT" layoutX="132.0" layoutY="51.0" prefHeight="16.0" prefWidth="97.0" text="R$0.00" textFill="#f8f4f4">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="savingsLabel" alignment="CENTER_RIGHT" layoutX="133.0" layoutY="74.0" prefHeight="18.0" prefWidth="97.0" text="R$0.00" textFill="#fcf9f9">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="creditCardLabel" alignment="CENTER_RIGHT" layoutX="133.0" layoutY="101.0" prefHeight="18.0" prefWidth="97.0" text="R$0.00" textFill="#fcf9f9">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="moneyLabel" alignment="CENTER_RIGHT" layoutX="133.0" layoutY="127.0" prefHeight="18.0" prefWidth="97.0" text="R$0.00" textFill="#fcf9f9">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" alignment="CENTER" layoutX="35.0" layoutY="189.0" prefHeight="20.0" prefWidth="158.0" text="R$0.00" textFill="#f2f0f0">
+         <font>
+            <Font name="Trebuchet MS" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="230.0" prefHeight="2.0" prefWidth="220.0" />
+      <Label fx:id="dateLabel" alignment="CENTER" layoutX="636.0" layoutY="15.0" prefHeight="19.0" prefWidth="150.0" textFill="#f5f2f2">
+         <font>
+            <Font name="Trebuchet MS" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="4.0" layoutY="11.0" prefHeight="25.0" prefWidth="235.0" text="Controle Financeiro" textFill="#eeebeb">
+         <font>
+            <Font name="Trebuchet MS" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="262.0" text="Descrição" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="newDescription" layoutX="11.0" layoutY="279.0" onMouseClicked="#cleanMsgNewData" onMousePressed="#hideDeleteBtn" prefHeight="27.0" prefWidth="220.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></TextField>
+      <ComboBox fx:id="newAccount" layoutX="11.0" layoutY="346.0" onMouseClicked="#hideDeleteBtn" prefHeight="27.0" prefWidth="220.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="13.0" layoutY="327.0" text="Conta" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="387.0" text="Data" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="388.0" text="Valor" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newValue" layoutX="151.0" layoutY="408.0" onMouseClicked="#cleanMsgNewData" prefHeight="27.0" prefWidth="78.0">
+         <font>
+            <Font name="Trebuchet MS" size="13.0" />
+         </font></TextField>
+      <RadioButton fx:id="newDebit" layoutX="34.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#hideDeleteBtn" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton fx:id="newCredit" layoutX="129.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#hideDeleteBtn" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <Label fx:id="newDataMsg" alignment="CENTER" layoutY="239.0" prefHeight="17.0" prefWidth="235.0" textFill="#e8a3a3" />
+      <Button fx:id="deleteBtn" alignment="CENTER_RIGHT" layoutX="1115.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteSelectedRow" onMouseClicked="#cleanMsgNewData" prefHeight="22.0" prefWidth="69.0" style="-fx-background-color: #FFF;" text="Apagar" textFill="#018786">
+         <font>
+            <Font name="Trebuchet MS Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="74.0" layoutY="452.0">
+         <image>
+            <Image url="@../lib/icons/down.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="54.0" layoutY="451.0">
+         <image>
+            <Image url="@../lib/icons/money.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="170.0" layoutY="452.0">
+         <image>
+            <Image url="@../lib/icons/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="150.0" layoutY="451.0">
+         <image>
+            <Image url="@../lib/icons/money.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" layoutX="786.0" layoutY="8.0" onMouseClicked="#nextMonth">
+         <image>
+            <Image url="@../lib/icons/right.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView layoutX="602.0" layoutY="8.0" onMouseClicked="#previousMonth">
+         <image>
+            <Image url="@../lib/icons/left.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="77.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#insertNewData" onMousePressed="#hideDeleteBtn" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #FFF;" text="Salvar" textFill="#018786">
+         <font>
+            <Font name="Trebuchet MS Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView accessibleRole="BUTTON" layoutX="79.0" layoutY="510.0" onMouseClicked="#insertNewData">
+         <image>
+            <Image url="@../lib/icons/save.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="deleteImg" fitHeight="19.0" fitWidth="18.0" layoutX="1119.0" layoutY="22.0" onMouseClicked="#deleteSelectedRow">
+         <image>
+            <Image url="@../lib/icons/delete.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="50.0" layoutY="478.0" text="Despesa" textFill="#fcfafa">
+         <font>
+            <Font name="Trebuchet MS Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="478.0" text="Renda" textFill="#f5f3f3">
+         <font>
+            <Font name="Trebuchet MS Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
